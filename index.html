@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/flat-ui.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.8.0"></script>
+
+    <script src="js/main.js"></script>
+
+    <title>chart.js</title>
 </head>
 <body>
+    <div id="search-button" class="show">
+        <div class="view-inner">
+            <div class="btn btn-block btn-lg btn-primary">SEARCH</div>
+        </div>
+    </div>
 
-<button id="connect" type="button">Connect</button>
-
-<button id="disconnect" type="button">Disconnect</button>
-
-<div id="terminal"></div>
-
-<form id="send-form">
-    <input id="input" type="text">
-    <button type="submit">Send</button>
-</form>
-
-<script src="main.js"></script>
-
+    <canvas id="myChart" width="400" height="350"></canvas>
 </body>
 </html>
