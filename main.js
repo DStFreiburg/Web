@@ -7,14 +7,14 @@ const TX_CHARACTERISTIC_UUID = "a4f01d8c-a037-43b6-9050-1876a8c23584";
 let txCharacteristic;
 let rxCharacteristic;
 
-let searchButton;
+let connectButton;
 let readButton;
 
 let loading;
 
 function init() {
-  searchButton = document.querySelector("#search-button");
-  searchButton.addEventListener("click", searchBLE);
+  connectButton = document.querySelector("#connect-button");
+  connectButton.addEventListener("click", searchBLE);
 }
 
 // search & connect
