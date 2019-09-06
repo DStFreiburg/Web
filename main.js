@@ -1,16 +1,16 @@
-// Получение ссылок на элементы UI
 let connectButton = document.getElementById('connect');
 let disconnectButton = document.getElementById('disconnect');
 let terminalContainer = document.getElementById('terminal');
 let sendForm = document.getElementById('send-form');
 let inputField = document.getElementById('input');
 
-// Подключение к устройству при нажатии на кнопку Connect
+const FREQ_UUID = "aa9d6f72-d074-11e9-826f-2a2ae2dbcce4"
+// Connect
 connectButton.addEventListener('click', function() {
   connect();
 });
 
-// Отключение от устройства при нажатии на кнопку Disconnect
+// Disconnect
 disconnectButton.addEventListener('click', function() {
   disconnect();
 });
@@ -44,9 +44,11 @@ function connect() {
 // Запрос выбора Bluetooth устройства
 function requestBluetoothDevice() {
   log('Requesting bluetooth device...');
+  filters: [{ services: [FREQ_UUID] }],
+  optionalServices: ["battery_service"]
 
   return navigator.bluetooth.requestDevice({
-    
+
   }).
       then(device => {
         log('"' + device.name + '" bluetooth device selected');
